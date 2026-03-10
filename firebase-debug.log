@@ -1,0 +1,152 @@
+[debug] [2026-03-09T03:43:46.832Z] ----------------------------------------------------------------------
+[debug] [2026-03-09T03:43:46.835Z] Command:       /home/leonl/.nvm/versions/node/v22.16.0/bin/node /home/leonl/.nvm/versions/node/v22.16.0/bin/firebase login --no-localhost
+[debug] [2026-03-09T03:43:46.836Z] CLI Version:   15.9.0
+[debug] [2026-03-09T03:43:46.836Z] Platform:      linux
+[debug] [2026-03-09T03:43:46.837Z] Node Version:  v22.16.0
+[debug] [2026-03-09T03:43:46.837Z] Time:          Mon Mar 09 2026 11:43:46 GMT+0800 (Australian Western Standard Time)
+[debug] [2026-03-09T03:43:46.837Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-03-09T03:43:46.840Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[error] 
+[error] Error: Cannot run login in non-interactive mode. See login:ci to generate a token for use in non-interactive environments.
+[debug] [2026-03-09T04:24:06.912Z] ----------------------------------------------------------------------
+[debug] [2026-03-09T04:24:06.913Z] Command:       /home/leonl/.nvm/versions/node/v22.16.0/bin/node /home/leonl/.nvm/versions/node/v22.16.0/bin/firebase deploy --only firestore:indexes
+[debug] [2026-03-09T04:24:06.914Z] CLI Version:   15.9.0
+[debug] [2026-03-09T04:24:06.914Z] Platform:      linux
+[debug] [2026-03-09T04:24:06.914Z] Node Version:  v22.16.0
+[debug] [2026-03-09T04:24:06.914Z] Time:          Mon Mar 09 2026 12:24:06 GMT+0800 (Australian Western Standard Time)
+[debug] [2026-03-09T04:24:06.914Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-03-09T04:24:08.416Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-09T04:24:08.417Z] > authorizing via signed-in user (ll.badapps@gmail.com)
+[debug] [2026-03-09T04:24:08.417Z] [iam] checking project hung-drawn-hq for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]
+[debug] [2026-03-09T04:24:08.418Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:08.418Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:08.419Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hung-drawn-hq:testIamPermissions [none]
+[debug] [2026-03-09T04:24:08.419Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hung-drawn-hq:testIamPermissions  x-goog-user-project=hung-drawn-hq
+[debug] [2026-03-09T04:24:08.419Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hung-drawn-hq:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[debug] [2026-03-09T04:24:10.257Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hung-drawn-hq:testIamPermissions 200
+[debug] [2026-03-09T04:24:10.258Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hung-drawn-hq:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'hung-drawn-hq'...
+[info] 
+[info] i  deploying firestore 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[debug] [2026-03-09T04:24:10.261Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:10.262Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:10.262Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default) [none]
+[debug] [2026-03-09T04:24:12.444Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default) 200
+[debug] [2026-03-09T04:24:12.445Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default) {"name":"projects/hung-drawn-hq/databases/(default)","uid":"6231d92f-fc80-4479-a38b-e26692683429","createTime":"2026-03-09T03:48:56.002862Z","updateTime":"2026-03-09T03:48:56.002862Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2026-03-09T03:48:56.002862Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"IPzR8bL8kZMDMJnowNz0kZMD"}
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2026-03-09T04:24:12.447Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:12.447Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:12.448Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/hung-drawn-hq:test [none]
+[debug] [2026-03-09T04:24:12.448Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/hung-drawn-hq:test [omitted]
+[debug] [2026-03-09T04:24:14.505Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/hung-drawn-hq:test 200
+[debug] [2026-03-09T04:24:14.506Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/hung-drawn-hq:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[info] i  firestore: deploying indexes... 
+[debug] [2026-03-09T04:24:14.507Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:14.507Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:14.507Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2026-03-09T04:24:15.005Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2026-03-09T04:24:15.005Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default)/collectionGroups/-/indexes {"indexes":[{"name":"projects/hung-drawn-hq/databases/(default)/collectionGroups/clients/indexes/CICAgOjXh4EK","queryScope":"COLLECTION","fields":[{"fieldPath":"userId","order":"ASCENDING"},{"fieldPath":"createdAt","order":"DESCENDING"},{"fieldPath":"__name__","order":"DESCENDING"}],"state":"READY","density":"SPARSE_ALL"}]}
+[debug] [2026-03-09T04:24:15.005Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:15.005Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:15.006Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2026-03-09T04:24:15.465Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2026-03-09T04:24:15.465Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/hung-drawn-hq/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2026-03-09T04:24:15.465Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:15.465Z] Checked if tokens are valid: true, expires at: 1773031479039
+[debug] [2026-03-09T04:24:15.465Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default) [none]
+[debug] [2026-03-09T04:24:15.935Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default) 200
+[debug] [2026-03-09T04:24:15.936Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/hung-drawn-hq/databases/(default) {"name":"projects/hung-drawn-hq/databases/(default)","uid":"6231d92f-fc80-4479-a38b-e26692683429","createTime":"2026-03-09T03:48:56.002862Z","updateTime":"2026-03-09T03:48:56.002862Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2026-03-09T03:48:56.002862Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"II6GxrT8kZMDMJnowNz0kZMD"}
+[info] i  firestore: there are 1 indexes defined in your project that are not present in your firestore indexes file. To delete them, run this command with the --force flag. 
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully for (default) database 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/hung-drawn-hq/overview
+[debug] [2026-03-09T06:07:04.896Z] ----------------------------------------------------------------------
+[debug] [2026-03-09T06:07:04.898Z] Command:       /home/leonl/.nvm/versions/node/v22.16.0/bin/node /home/leonl/.nvm/versions/node/v22.16.0/bin/firebase init functions
+[debug] [2026-03-09T06:07:04.898Z] CLI Version:   15.9.0
+[debug] [2026-03-09T06:07:04.899Z] Platform:      linux
+[debug] [2026-03-09T06:07:04.899Z] Node Version:  v22.16.0
+[debug] [2026-03-09T06:07:04.899Z] Time:          Mon Mar 09 2026 14:07:04 GMT+0800 (Australian Western Standard Time)
+[debug] [2026-03-09T06:07:04.899Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/leonl/applications/personal/hng.drwn.hq
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-03-09T06:07:06.096Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-09T06:07:06.096Z] > authorizing via signed-in user (ll.badapps@gmail.com)
+[debug] [2026-03-09T06:07:06.097Z] Checked if tokens are valid: false, expires at: 1773031479039
+[debug] [2026-03-09T06:07:06.097Z] Checked if tokens are valid: false, expires at: 1773031479039
+[debug] [2026-03-09T06:07:06.098Z] > refreshing access token with scopes: []
+[debug] [2026-03-09T06:07:06.099Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-03-09T06:07:06.099Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-03-09T06:07:06.797Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-03-09T06:07:06.797Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-03-09T06:07:06.806Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hung-drawn-hq [none]
+[debug] [2026-03-09T06:07:07.725Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hung-drawn-hq 200
+[debug] [2026-03-09T06:07:07.725Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hung-drawn-hq {"projectId":"hung-drawn-hq","projectNumber":"647612295681","displayName":"hung-drawn-hq","name":"projects/hung-drawn-hq","resources":{"hostingSite":"hung-drawn-hq"},"state":"ACTIVE","etag":"1_57dbccff-5d1b-4a2f-85c1-88f7d6099ecd"}
+[info] i  Using project hung-drawn-hq (hung-drawn-hq) . 
+[info] 
+=== Functions Setup
+[debug] [2026-03-09T06:07:07.731Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-09T06:07:07.731Z] > authorizing via signed-in user (ll.badapps@gmail.com)
+[debug] [2026-03-09T06:07:07.731Z] [iam] checking project hung-drawn-hq for permissions ["firebase.projects.get"]
+[debug] [2026-03-09T06:07:07.731Z] Checked if tokens are valid: true, expires at: 1773040025797
+[debug] [2026-03-09T06:07:07.731Z] Checked if tokens are valid: true, expires at: 1773040025797
+[debug] [2026-03-09T06:07:07.731Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hung-drawn-hq:testIamPermissions [none]
+[debug] [2026-03-09T06:07:07.731Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hung-drawn-hq:testIamPermissions  x-goog-user-project=hung-drawn-hq
+[debug] [2026-03-09T06:07:07.731Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hung-drawn-hq:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2026-03-09T06:07:09.568Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hung-drawn-hq:testIamPermissions 200
+[debug] [2026-03-09T06:07:09.568Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hung-drawn-hq:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2026-03-09T06:07:09.569Z] Checked if tokens are valid: true, expires at: 1773040025797
+[debug] [2026-03-09T06:07:09.569Z] Checked if tokens are valid: true, expires at: 1773040025797
+[debug] [2026-03-09T06:07:09.570Z] Checked if tokens are valid: true, expires at: 1773040025797
+[debug] [2026-03-09T06:07:09.570Z] Checked if tokens are valid: true, expires at: 1773040025797
+[debug] [2026-03-09T06:07:09.570Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-03-09T06:07:09.570Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/cloudfunctions.googleapis.com  x-goog-user-project=hung-drawn-hq
+[debug] [2026-03-09T06:07:09.571Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/runtimeconfig.googleapis.com [none]
+[debug] [2026-03-09T06:07:09.571Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/runtimeconfig.googleapis.com  x-goog-user-project=hung-drawn-hq
+[debug] [2026-03-09T06:07:11.726Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/runtimeconfig.googleapis.com 200
+[debug] [2026-03-09T06:07:11.726Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2026-03-09T06:07:11.737Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/cloudfunctions.googleapis.com 200
+[debug] [2026-03-09T06:07:11.737Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-03-09T06:07:11.738Z] Checked if tokens are valid: true, expires at: 1773040025797
+[debug] [2026-03-09T06:07:11.738Z] Checked if tokens are valid: true, expires at: 1773040025797
+[debug] [2026-03-09T06:07:11.738Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2026-03-09T06:07:11.738Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/cloudfunctions.googleapis.com:enable  x-goog-user-project=hung-drawn-hq
+[debug] [2026-03-09T06:07:13.801Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2026-03-09T06:07:13.801Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/hung-drawn-hq/services/cloudfunctions.googleapis.com:enable [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
