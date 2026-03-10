@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Navbar from "@/components/Navbar";
@@ -12,7 +12,7 @@ import { Client } from "@/types/client";
 import { createJob, getJobs, updateJob, deleteJob, generateInvoiceNumber } from "@/lib/firebase/jobs";
 import { getClients } from "@/lib/firebase/clients";
 
-export default function JobsPage() {
+function JobsContent() {
   const { user } = useAuth();
   const searchParams = useSearchParams();
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -200,5 +200,13 @@ export default function JobsPage() {
         </div>
       </div>
     </ProtectedRoute>
+  );
+}
+
+export default function JobsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center"><p className="text-gray-500">Loading...</p></div>}>
+      <JobsContent />
+    </Suspense>
   );
 }

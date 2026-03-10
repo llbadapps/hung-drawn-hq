@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Navbar from "@/components/Navbar";
@@ -10,7 +10,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { Client, ClientFormData } from "@/types/client";
 import { createClient, getClients, updateClient, deleteClient } from "@/lib/firebase/clients";
 
-export default function ClientsPage() {
+function ClientsContent() {
   const { user } = useAuth();
   const searchParams = useSearchParams();
   const [clients, setClients] = useState<Client[]>([]);
@@ -147,5 +147,13 @@ export default function ClientsPage() {
         </div>
       </div>
     </ProtectedRoute>
+  );
+}
+
+export default function ClientsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center"><p className="text-gray-500">Loading...</p></div>}>
+      <ClientsContent />
+    </Suspense>
   );
 }
