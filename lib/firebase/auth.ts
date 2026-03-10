@@ -3,6 +3,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+  sendEmailVerification,
   User,
 } from 'firebase/auth';
 import { auth } from './config';
@@ -10,6 +11,10 @@ import { auth } from './config';
 export const signUp = async (email: string, password: string) => {
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+
+    // Send email verification
+    await sendEmailVerification(userCredential.user);
+
     return { user: userCredential.user, error: null };
   } catch (error: any) {
     return { user: null, error: error.message };
