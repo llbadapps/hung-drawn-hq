@@ -29,29 +29,20 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4" style={{ backgroundColor: '#111d4a' }}>
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 bg-white dark:bg-gray-900">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <div className="flex justify-center mb-6">
             <div className="transform scale-150">
-              <div className="flex items-center">
-                <div className="relative">
-                  <div className="flex items-baseline space-x-0.5">
-                    <span className="text-2xl font-black tracking-tighter" style={{ color: '#96c5b0' }}>HD</span>
-                    <span className="text-xl font-black tracking-tighter" style={{ color: '#510d0a' }}>.</span>
-                    <span className="text-2xl font-black tracking-tighter" style={{ color: '#96c5b0' }}>HQ</span>
-                  </div>
-                  <div className="absolute -bottom-0.5 left-0 right-0 h-0.5 rounded-full" style={{ backgroundColor: '#96c5b0' }}></div>
-                </div>
-              </div>
+              <Logo />
             </div>
           </div>
-          <h2 className="mt-6 text-3xl font-black tracking-tight" style={{ color: '#96c5b0' }}>
+          <h2 className="mt-6 text-3xl font-black tracking-tight text-gray-900 dark:text-white">
             Welcome Back
           </h2>
-          <p className="mt-2 text-sm" style={{ color: '#857c8d' }}>Sign in to manage your projects</p>
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Sign in to manage your projects</p>
         </div>
-        <form className="mt-8 space-y-6 bg-white rounded-xl shadow-2xl p-8" onSubmit={handleSubmit}>
+        <form className="mt-8 space-y-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-gray-200 dark:border-gray-700" onSubmit={handleSubmit}>
           {error && (
             <div className="rounded-md bg-red-50 p-4">
               <p className="text-sm text-red-800">{error}</p>
@@ -98,18 +89,16 @@ export default function LoginPage() {
               disabled={loading}
               className="group relative w-full flex justify-center py-3 px-4 border-2 border-transparent text-sm font-bold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 transition-all"
               style={{
-                backgroundColor: '#96c5b0',
-                color: '#191102',
+                backgroundColor: '#111d4a',
+                color: 'white',
               }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#857c8d'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#96c5b0'}
             >
               {loading ? 'Signing in...' : 'Sign in'}
             </button>
           </div>
 
           <div className="text-center">
-            <Link href="/signup" className="text-sm font-medium transition-colors" style={{ color: '#857c8d' }}>
+            <Link href="/signup" className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
               Don't have an account? <span className="font-bold">Sign up</span>
             </Link>
           </div>
